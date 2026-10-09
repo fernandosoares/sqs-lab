@@ -1,0 +1,22 @@
+info:
+  name: Order Submit
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{SQS_LAB.base_url}}{{SQS_LAB.context_path}}/orders/submit"
+  body:
+    type: json
+    data: |-
+      {
+        "items": ["Air Fryer", "Playstation 5"],
+        "amount": 1999.99
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

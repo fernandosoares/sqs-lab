@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: sqs-lab
+
+server:
+  servlet:
+    context-path: /sqs-lab
+  port: ${PORT}
